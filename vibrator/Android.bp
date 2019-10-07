@@ -1,0 +1,27 @@
+//
+// Copyright (C) 2020 The MoKee Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "android.hardware.vibrator@1.3-service.m1872",
+    relative_install_path: "hw",
+    vendor: true,
+    vintf_fragments: ["android.hardware.vibrator@1.3-service.m1872.xml"],
+    init_rc: ["android.hardware.vibrator@1.3-service.m1872.rc"],
+    srcs: ["service.cpp", "Vibrator.cpp"],
+    cflags: ["-Wall", "-Werror", "-DMEIZU_HACK"],
+    shared_libs: [
+        "libbase",
+        "libhidlbase",
+        "libhidltransport",
+        "liblog",
+        "libutils",
+        "libhardware",
+        "android.hardware.vibrator@1.0",
+        "android.hardware.vibrator@1.1",
+        "android.hardware.vibrator@1.2",
+        "android.hardware.vibrator@1.3",
+    ],
+}

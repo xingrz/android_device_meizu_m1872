@@ -250,3 +250,10 @@ vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/config/stk3x2x_0.json
 vendor/etc/sensors/config/tmd2725.json
 vendor/etc/sensors/config/tmx4903.json
+
+# Vibrator
+vendor/firmware/aw8691_haptic.bin
+vendor/firmware/coin_ring.bin
+vendor/firmware/defalm_ring.bin
+vendor/firmware/defsim_ring.bin
+vendor/lib64/hw/vibrator.default.so:vendor/lib64/hw/vibrator.sdm710.so

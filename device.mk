@@ -15,5 +15,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+ # Vibrator
+ PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.3-service.m1872
+
 # Inherit from sdm710-common
 $(call inherit-product, device/meizu/sdm710-common/common.mk)
