@@ -1,0 +1,2 @@
+on early-fs
+    mount none /system/etc/vendor_fstab.qcom /vendor/etc/fstab.qcom bind
