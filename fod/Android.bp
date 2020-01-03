@@ -1,0 +1,32 @@
+//
+// Copyright (C) 2019 The LineageOS Project
+// Copyright (C) 2020 The MoKee Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    relative_install_path: "hw",
+    vendor: true,
+    defaults: ["hidl_defaults"],
+    name: "vendor.mokee.biometrics.fingerprint.inscreen@1.0-service.m1872",
+    vintf_fragments: ["vendor.mokee.biometrics.fingerprint.inscreen@1.0-service.m1872.xml"],
+    init_rc: ["vendor.mokee.biometrics.fingerprint.inscreen@1.0-service.m1872.rc"],
+    srcs: [
+        "service.cpp",
+        "FingerprintInscreen.cpp",
+        "StellerClientCallback.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libhardware",
+        "libhidlbase",
+        "libhidltransport",
+        "liblog",
+        "libhwbinder",
+        "libutils",
+        "libcutils",
+        "vendor.mokee.biometrics.fingerprint.inscreen@1.0",
+        "vendor.synaptics.fingerprint.interfaces.extensions@1.0",
+    ],
+}
