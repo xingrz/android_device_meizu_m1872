@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.mokee.biometrics.fingerprint.inscreen@1.0-service.m1872
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.mokee.livedisplay@2.0-service.m1872
+
  # Vibrator
  PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.3-service.m1872

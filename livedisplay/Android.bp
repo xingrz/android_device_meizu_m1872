@@ -1,0 +1,30 @@
+//
+// Copyright (C) 2019 The LineageOS Project
+// Copyright (C) 2020 The MoKee Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "vendor.mokee.livedisplay@2.0-service.m1872",
+    vintf_fragments: ["vendor.mokee.livedisplay@2.0-service.m1872.xml"],
+    init_rc: ["vendor.mokee.livedisplay@2.0-service.m1872.rc"],
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: [
+        "PictureAdjustment.cpp",
+        "Utils.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libcutils",
+        "libdl",
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "vendor.mokee.livedisplay@2.0",
+    ],
+}
