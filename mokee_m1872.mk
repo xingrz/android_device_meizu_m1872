@@ -43,3 +43,7 @@ BUILD_FINGERPRINT := Meizu/meizu_16X_CN/16X:8.1.0/OPM1.171019.026/1572938190:use
 
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.lcd_density=400
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    fod.dimming.min=40 \
+    fod.dimming.max=255
