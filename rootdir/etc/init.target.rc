@@ -1,2 +1,4 @@
 on early-fs
     mount none /system/etc/vendor_fstab.qcom /vendor/etc/fstab.qcom bind
+    mount none /system/etc/vendor_init.qcom.rc /vendor/etc/init/hw/init.qcom.rc bind
+    mount none /system/etc/vendor_init.target.rc /vendor/etc/init/hw/init.target.rc bind

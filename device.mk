@@ -16,7 +16,9 @@ PRODUCT_PACKAGES += \
     init.target.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/vendor_fstab.qcom:$(TARGET_COPY_OUT_SYSTEM)/etc/vendor_fstab.qcom
+    $(LOCAL_PATH)/configs/vendor_fstab.qcom:$(TARGET_COPY_OUT_SYSTEM)/etc/vendor_fstab.qcom \
+    $(LOCAL_PATH)/configs/vendor_init.qcom.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/vendor_init.qcom.rc \
+    $(LOCAL_PATH)/configs/vendor_init.target.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/vendor_init.target.rc
 
 # Inherit from sdm710-common
 $(call inherit-product, device/meizu/sdm710-common/common.mk)
