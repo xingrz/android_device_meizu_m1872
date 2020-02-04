@@ -64,6 +64,8 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all /vendor/etc/fstab.qcom
+    start logcat
+    write /sys/class/leds/breath/blink 10
     restorecon_recursive /persist
     mkdir /persist/data 0700 system system
 
@@ -75,6 +77,11 @@ on post-fs
     start qseecomd
     exec - system system -- /vendor/bin/init.qti.qseecomd.sh
     write /dev/ipa 1
+
+service logcat /system/bin/logcat -b all -f /cache/logcat.log -r 5120 -n 256
+     user root
+     group root
+     disabled
 
 service sec_nvm /vendor/bin/sec_nvm
     class core
