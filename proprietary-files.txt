@@ -101,6 +101,37 @@ vendor/firmware/bu63169.prog
 vendor/firmware/bu64748gwz.coeff
 vendor/firmware/bu64748gwz.prog
 
+# Fingerprint
+vendor/bin/hw/meizu.biometrics.fingerprint@2.1-service
+vendor/etc/init/meizu.biometrics.fingerprint@2.1-service.rc
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
+# Fingerprint - firmware
+vendor/firmware/image/mzfp64.b00
+vendor/firmware/image/mzfp64.b01
+vendor/firmware/image/mzfp64.b02
+vendor/firmware/image/mzfp64.b03
+vendor/firmware/image/mzfp64.b04
+vendor/firmware/image/mzfp64.b05
+vendor/firmware/image/mzfp64.b06
+vendor/firmware/image/mzfp64.b07
+vendor/firmware/image/mzfp64.mdt
+vendor/firmware/mzfp64.b00
+vendor/firmware/mzfp64.b01
+vendor/firmware/mzfp64.b02
+vendor/firmware/mzfp64.b03
+vendor/firmware/mzfp64.b04
+vendor/firmware/mzfp64.b05
+vendor/firmware/mzfp64.b06
+vendor/firmware/mzfp64.b07
+vendor/firmware/mzfp64.mdt
+
+# Fingerprint - Synaptics
+vendor/etc/permissions/com.synaptics.fingerprint.extension.xml
+vendor/framework/com.synaptics.fingerprint.extension.jar
+vendor/lib64/hw/fingerprint.syna.so
+vendor/lib64/libvfmtztransport.so
+
 # Kernel modules
 vendor/lib/modules/audio_adsp_loader.ko
 vendor/lib/modules/audio_analog_cdc.ko
