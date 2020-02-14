@@ -4,3 +4,6 @@ service vendor.fingerprint-inscreen-1-0-m1872 /vendor/bin/hw/vendor.mokee.biomet
     user system
     group system
     shutdown critical
+
+on post-fs-data
+    setprop sys.meizu.fingerprint.boot start
