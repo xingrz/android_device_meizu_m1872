@@ -1,0 +1,6 @@
+package vendor.synaptics.fingerprint.interfaces.extensions@1.0;
+
+interface IStellerClientCallback {
+    atuStatus(int32_t ret);
+    hbmCtrl(int32_t ret);
+};
