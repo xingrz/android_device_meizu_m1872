@@ -53,6 +53,8 @@ class FingerprintInscreen : public IFingerprintInscreen {
     sp<ISteller> mSteller;
     sp<IStellerClientCallback> mStellerClientCallback;
 
+    bool mFingerPressed;
+
     void notifyHal(int32_t status, int32_t data);
 };
 

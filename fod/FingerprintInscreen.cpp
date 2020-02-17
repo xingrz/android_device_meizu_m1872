@@ -16,6 +16,7 @@
 #include <hidl/HidlTransportSupport.h>
 #include <fstream>
 #include <cmath>
+#include <thread>
 
 #define NOTIFY_FINGER_DETECTED 1
 #define NOTIFY_FINGER_REMOVED 2
@@ -54,7 +55,9 @@ static T get(const std::string& path, const T& def) {
     return file.fail() ? def : result;
 }
 
-FingerprintInscreen::FingerprintInscreen() {
+FingerprintInscreen::FingerprintInscreen()
+    : mFingerPressed{false}
+    {
     mSteller = ISteller::getService();
     mStellerClientCallback = new StellerClientCallback();
 }
@@ -80,14 +83,20 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
 }
 
 Return<void> FingerprintInscreen::onPress() {
+    mFingerPressed = true;
     set(BOOST_ENABLE_PATH, 1);
     set(HBM_ENABLE_PATH, 1);
-    // TODO: delay for 60 ms
-    notifyHal(NOTIFY_FINGER_DETECTED, 0);
+    std::thread([this]() {
+        std::this_thread::sleep_for(std::chrono::milliseconds(60));
+        if (mFingerPressed) {
+            notifyHal(NOTIFY_FINGER_DETECTED, 0);
+        }
+    }).detach();
     return Void();
 }
 
 Return<void> FingerprintInscreen::onRelease() {
+    mFingerPressed = false;
     set(HBM_ENABLE_PATH, 0);
     notifyHal(NOTIFY_FINGER_REMOVED, 0);
     return Void();
