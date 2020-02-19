@@ -81,8 +81,8 @@
         <param key="input_mic_max_count" value="4"/>
     </config_params>
     <acdb_ids>
-        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="15"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="14"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="14"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED" acdb_id="101"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED_VBAT" acdb_id="124"/>
@@ -105,6 +105,8 @@
         <device name="SND_DEVICE_IN_HANDSET_GENERIC_QMIC" acdb_id="157"/>
     </acdb_ids>
     <backend_names>
+        <device name="SND_DEVICE_OUT_HANDSET" backend="receiver" interface="INT0_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_HANDSET" backend="receiver" interface="INT0_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_HEADPHONES" backend="headphones" interface="INT0_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_BT_SCO_WB" backend="bt-sco-wb" interface="SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_BT_SCO" backend="bt-sco" interface="SLIMBUS_7_RX"/>
