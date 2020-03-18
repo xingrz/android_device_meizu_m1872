@@ -1,9 +1,30 @@
+# Audio - ACDB
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
+vendor/etc/acdbdata/adsp_avs_config.acdb
+
 # Audio - firmware
 vendor/firmware/cs35l41-dsp1-diag.wmfw
 vendor/firmware/cs35l41-dsp1-spk-prot.bin
 vendor/firmware/cs35l41-dsp1-spk-prot.wmfw
 vendor/firmware/cs47l35-dsp3-ctrl.bin
 vendor/firmware/cs47l35-dsp3-ctrl.wmfw
+
+# Audio - HAL
+lib/libaudioroute.so
+lib64/libaudioroute.so
+vendor/lib/hw/audio.primary.sdm710.so
+vendor/lib/libaudio_log_utils.so
+vendor/lib/libtinycompress_vendor.so
+vendor/lib64/hw/audio.primary.sdm710.so
+vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libtinycompress_vendor.so
 
 # Camera
 vendor/lib/camera/com.qti.eeprom.truly_cmb433.so
@@ -131,6 +152,42 @@ vendor/etc/permissions/com.synaptics.fingerprint.extension.xml
 vendor/framework/com.synaptics.fingerprint.extension.jar
 vendor/lib64/hw/fingerprint.syna.so
 vendor/lib64/libvfmtztransport.so
+
+# Graphics - firmware
+vendor/firmware/a225_pfp.fw
+vendor/firmware/a225_pm4.fw
+vendor/firmware/a225p5_pm4.fw
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
+vendor/firmware/a330_pfp.fw
+vendor/firmware/a330_pm4.fw
+vendor/firmware/a420_pfp.fw
+vendor/firmware/a420_pm4.fw
+vendor/firmware/a530_gpmu.fw2
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+vendor/firmware/a530v1_pfp.fw
+vendor/firmware/a530v1_pm4.fw
+vendor/firmware/a530v2_seq.fw2
+vendor/firmware/a530v3_gpmu.fw2
+vendor/firmware/a530v3_seq.fw2
+vendor/firmware/a540_gpmu.fw2
+vendor/firmware/a615_zap.b00
+vendor/firmware/a615_zap.b01
+vendor/firmware/a615_zap.b02
+vendor/firmware/a615_zap.elf
+vendor/firmware/a615_zap.mdt
+vendor/firmware/a630_gmu.bin
+vendor/firmware/a630_sqe.fw
+
+# IPA
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
 
 # Kernel modules
 vendor/lib/modules/audio_adsp_loader.ko

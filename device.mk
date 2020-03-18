@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.mokee.biometrics.fingerprint.inscreen@1.0-service.m1872
 
+# Init
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/init/vendor,$(TARGET_COPY_OUT_VENDOR))
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.mokee.livedisplay@2.0-service.m1872
